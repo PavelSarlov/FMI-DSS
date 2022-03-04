@@ -1,2 +1,3 @@
 # FMI-DSS
-FMI - Distributed Software Systems
+
+Materials, homeworks and stuff during the course.
