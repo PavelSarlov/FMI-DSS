@@ -1,0 +1,220 @@
+===
+=== prefix scan results...
+===
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 1
+populating a[], o[] finished in: 3638 ms
+Thread-0: step 1 begin!
+Thread-0: step 1 end!
+Thread-0: step 2 waiting for part calcs!
+Thread-0: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-0: step 2 begin!
+Thread-0: step 2 end!
+job finished in: 340 ms
+a[99999999] = 49999145992948
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 2
+populating a[], o[] finished in: 3637 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-0: step 1 end!
+Thread-1: step 1 end!
+Thread-1: step 2 waiting for part calcs!
+Thread-0: step 2 waiting for part calcs!
+Thread-1: notifying for step 1 end!
+Thread-0: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-1: step 2 begin!
+Thread-0: step 2 begin!
+Thread-1: step 2 end!
+Thread-0: step 2 end!
+job finished in: 259 ms
+a[99999999] = 49998867579098
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 3
+populating a[], o[] finished in: 3636 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-2: step 1 begin!
+Thread-0: step 1 end!
+Thread-2: step 1 end!
+Thread-1: step 1 end!
+Thread-0: step 2 waiting for part calcs!
+Thread-1: step 2 waiting for part calcs!
+Thread-2: step 2 waiting for part calcs!
+Thread-0: notifying for step 1 end!
+Thread-2: notifying for step 1 end!
+Thread-1: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-0: step 2 begin!
+Thread-1: step 2 begin!
+Thread-2: step 2 begin!
+Thread-0: step 2 end!
+Thread-1: step 2 end!
+Thread-2: step 2 end!
+job finished in: 230 ms
+a[99999999] = 49996753082893
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 4
+populating a[], o[] finished in: 3637 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-2: step 1 begin!
+Thread-3: step 1 begin!
+Thread-1: step 1 end!
+Thread-3: step 1 end!
+Thread-0: step 1 end!
+Thread-3: step 2 waiting for part calcs!
+Thread-0: step 2 waiting for part calcs!
+Thread-1: step 2 waiting for part calcs!
+Thread-3: notifying for step 1 end!
+Thread-2: step 1 end!
+Thread-2: step 2 waiting for part calcs!
+Thread-2: notifying for step 1 end!
+Thread-1: notifying for step 1 end!
+Thread-0: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-3: step 2 begin!
+Thread-0: step 2 begin!
+Thread-2: step 2 begin!
+Thread-1: step 2 begin!
+Thread-0: step 2 end!
+Thread-3: step 2 end!
+Thread-1: step 2 end!
+Thread-2: step 2 end!
+job finished in: 223 ms
+a[99999999] = 50000594059710
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 5
+populating a[], o[] finished in: 3646 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-2: step 1 begin!
+Thread-3: step 1 begin!
+Thread-4: step 1 begin!
+Thread-2: step 1 end!
+Thread-0: step 1 end!
+Thread-1: step 1 end!
+Thread-0: step 2 waiting for part calcs!
+Thread-1: step 2 waiting for part calcs!
+Thread-2: step 2 waiting for part calcs!
+Thread-0: notifying for step 1 end!
+Thread-2: notifying for step 1 end!
+Thread-1: notifying for step 1 end!
+Thread-3: step 1 end!
+Thread-4: step 1 end!
+Thread-3: step 2 waiting for part calcs!
+Thread-4: step 2 waiting for part calcs!
+Thread-3: notifying for step 1 end!
+Thread-4: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-2: step 2 begin!
+Thread-4: step 2 begin!
+Thread-1: step 2 begin!
+Thread-3: step 2 begin!
+Thread-0: step 2 begin!
+Thread-1: step 2 end!
+Thread-4: step 2 end!
+Thread-2: step 2 end!
+Thread-3: step 2 end!
+Thread-0: step 2 end!
+job finished in: 237 ms
+a[99999999] = 49996371920326
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 6
+populating a[], o[] finished in: 3633 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-2: step 1 begin!
+Thread-3: step 1 begin!
+Thread-4: step 1 begin!
+Thread-5: step 1 begin!
+Thread-2: step 1 end!
+Thread-1: step 1 end!
+Thread-2: step 2 waiting for part calcs!
+Thread-1: step 2 waiting for part calcs!
+Thread-2: notifying for step 1 end!
+Thread-1: notifying for step 1 end!
+Thread-3: step 1 end!
+Thread-3: step 2 waiting for part calcs!
+Thread-3: notifying for step 1 end!
+Thread-5: step 1 end!
+Thread-5: step 2 waiting for part calcs!
+Thread-5: notifying for step 1 end!
+Thread-4: step 1 end!
+Thread-4: step 2 waiting for part calcs!
+Thread-0: step 1 end!
+Thread-4: notifying for step 1 end!
+Thread-0: step 2 waiting for part calcs!
+Thread-0: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-1: step 2 begin!
+Thread-4: step 2 begin!
+Thread-5: step 2 begin!
+Thread-2: step 2 begin!
+Thread-0: step 2 begin!
+Thread-3: step 2 begin!
+Thread-2: step 2 end!
+Thread-1: step 2 end!
+Thread-5: step 2 end!
+Thread-0: step 2 end!
+Thread-3: step 2 end!
+Thread-4: step 2 end!
+job finished in: 234 ms
+a[99999999] = 50000142685748
+
+lisp@yoda:~/java/prefixScan/bin$ java -Xms4096m -Xmx5120m TaskRunner 100000000 7
+populating a[], o[] finished in: 3638 ms
+Thread-0: step 1 begin!
+Thread-1: step 1 begin!
+Thread-2: step 1 begin!
+Thread-3: step 1 begin!
+Thread-4: step 1 begin!
+Thread-5: step 1 begin!
+Thread-6: step 1 begin!
+Thread-4: step 1 end!
+Thread-4: step 2 waiting for part calcs!
+Thread-4: notifying for step 1 end!
+Thread-6: step 1 end!
+Thread-6: step 2 waiting for part calcs!
+Thread-6: notifying for step 1 end!
+Thread-3: step 1 end!
+Thread-1: step 1 end!
+Thread-3: step 2 waiting for part calcs!
+Thread-2: step 1 end!
+Thread-0: step 1 end!
+Thread-2: step 2 waiting for part calcs!
+Thread-0: step 2 waiting for part calcs!
+Thread-5: step 1 end!
+Thread-3: notifying for step 1 end!
+Thread-5: step 2 waiting for part calcs!
+Thread-0: notifying for step 1 end!
+Thread-1: step 2 waiting for part calcs!
+Thread-5: notifying for step 1 end!
+Thread-1: notifying for step 1 end!
+Thread-2: notifying for step 1 end!
+main: step 1 for all ended!
+main: sending notification for step2!
+Thread-6: step 2 begin!
+Thread-2: step 2 begin!
+Thread-0: step 2 begin!
+Thread-4: step 2 begin!
+Thread-1: step 2 begin!
+Thread-3: step 2 begin!
+Thread-5: step 2 begin!
+Thread-4: step 2 end!
+Thread-5: step 2 end!
+Thread-2: step 2 end!
+Thread-1: step 2 end!
+Thread-6: step 2 end!
+Thread-3: step 2 end!
+Thread-0: step 2 end!
+job finished in: 231 ms
+a[99999999] = 50002898781522
