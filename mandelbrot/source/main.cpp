@@ -16,7 +16,6 @@ const float MLBT_YMAX = 1.12f;
 const float WIDTH = (MLBT_XMAX - MLBT_XMIN);
 const float HEIGHT = (MLBT_YMAX - MLBT_YMIN);
 
-
 float* createColor(int i) {
     float values[] = {0.0f, 64.0f, 128.0f, 196.0f};
     float r = -(values[i % 4] / 255.0f - 1.0f);
