@@ -1,56 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
-void swap(int &a, int &b) {
-    int temp = a;
-    a = b;
-    b = temp;
-}
-
-void odd_phase(int len, int *arr, int &swaps) {
-    for (int i = 0; i < len - 1; i += 2) {
-        if (arr[i] > arr[i + 1]) {
-            swap(arr[i], arr[i+1]);
-            swaps++;
-        }
-    }
-}
-
-void even_phase(int len, int *arr, int &swaps) {
-    for (int i = 1; i < len - 1; i += 2) {
-        if (arr[i] > arr[i + 1]) {
-            swap(arr[i], arr[i+1]);
-            swaps++;
-        }
-    }
-}
-
-void bubble(int len, int *arr) {
-    int swaps = 1;
-
-    while(swaps) {
-        swaps = 0;
-
-        odd_phase(len, arr, swaps);
-        even_phase(len, arr, swaps);
-    }
-}
+#include <chrono>
+#include "bubble_sort.h"
+#include "worker_pool.h"
 
 int main() {
     srand(time(NULL));
 
-    int len = 100000;
-    int *arr = new int[len];
-    for(int i = 0; i < len; i++) {
+    int n = 10;
+    int *arr = new int[n];
+    for(int i = 0; i < n; i++) {
         arr[i] = rand();
     }
 
-    time_t start = time(NULL);
-    bubble(len, arr);
-    time_t end = time(NULL);
+    auto start = std::chrono::high_resolution_clock::now();
 
-    printf("%lld", end - start);
+    /* bubble_sort::bubble(len, arr, 0); */
+
+    worker_pool pool(4, 1);
+    pool.start(arr, n);
+
+    auto end = std::chrono::high_resolution_clock::now();
+
+    printf("%lld\n", std::chrono::duration_cast<std::chrono::microseconds>(end - start).count());
+
+    for(int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 
     delete[] arr;
     return 0;
