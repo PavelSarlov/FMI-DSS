@@ -1,0 +1,6 @@
+#!/bin/bash
+
+_CMD_JAVAC=`which javac`
+
+$_CMD_JAVAC -cp ./out/production/:./lib/ -d ./out/production/ src/*.java
+
