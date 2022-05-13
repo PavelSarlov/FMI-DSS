@@ -1,5 +1,20 @@
 #!/bin/bash
 
+function generateCcls() {
+    echo "clang
+%h -x c++-header
+%cpp -std=c++17
+%c -std=c17
+-Wall
+-Wno-narrowing
+-Werror
+-Wshadow
+-pedantic
+-Wextra
+-I./include
+" >.ccls
+}
+
 OUT="target/$(pwd | sed -E 's/ /\\ /g' | xargs basename).exe"
 CC="$(which g++.exe)"
 FLAGS="-O2\

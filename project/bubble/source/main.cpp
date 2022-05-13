@@ -17,7 +17,7 @@ int main() {
 
     /* bubble_sort::bubble(len, arr, 0); */
 
-    worker_pool pool(4, 1);
+    worker_pool pool(2, 1);
     pool.start(arr, n);
 
     auto end = std::chrono::high_resolution_clock::now();
